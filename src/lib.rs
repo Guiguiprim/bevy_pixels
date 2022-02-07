@@ -45,7 +45,7 @@ pub struct PixelsResource {
 pub struct PixelsPlugin;
 
 impl Plugin for PixelsPlugin {
-    fn build(&self, app: &mut AppBuilder) {
+    fn build(&self, app: &mut App) {
         app.add_stage_after(
             CoreStage::PostUpdate,
             PixelsStage::Draw,
@@ -62,10 +62,10 @@ impl Plugin for PixelsPlugin {
             SystemStage::parallel(),
         )
         .init_resource::<PixelsOptions>()
-        .add_startup_system(Self::setup_system.system())
-        .add_system(Self::window_resize_system.system())
-        .add_system(Self::window_change_system.system())
-        .add_system_to_stage(PixelsStage::Render, Self::render_system.system());
+        .add_startup_system(Self::setup_system)
+        .add_system(Self::window_resize_system)
+        .add_system(Self::window_change_system)
+        .add_system_to_stage(PixelsStage::Render, Self::render_system);
     }
 }
 

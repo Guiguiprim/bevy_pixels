@@ -17,13 +17,13 @@ x11 = ["bevy_winit/x11"]
 wayland = ["bevy_winit/wayland"]
 
 [dependencies]
-bevy_app = "0.5"
-bevy_diagnostic = "0.5"
-bevy_ecs = "0.5"
-bevy_window = "0.5"
-bevy_winit = "0.5"
+bevy_app = "0.6"
+bevy_diagnostic = "0.6"
+bevy_ecs = "0.6"
+bevy_window = "0.6"
+bevy_winit = "0.6"
 pixels = "0.8"
 
 [dev-dependencies]
-bevy_internal = { version = "0.5", features = ["bevy_winit"] }
+bevy_internal = { version = "0.6", features = ["bevy_winit"] }
 rand = "0.8"
