@@ -11,6 +11,11 @@ keywords = ["bevy", "pixels", "graphics", "2d", "framebuffer"]
 categories = ["game-engines", "graphics", "rendering"]
 exclude = ["images/**/*"]
 
+[features]
+default = ["x11"]
+x11 = ["bevy_winit/x11"]
+wayland = ["bevy_winit/wayland"]
+
 [dependencies]
 bevy_app = "0.5"
 bevy_diagnostic = "0.5"
